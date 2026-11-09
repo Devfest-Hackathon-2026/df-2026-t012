@@ -1,34 +1,41 @@
-# 秘密情報（コミットしない）
 .env
-.env.*
-!.env.example
-.dev.vars
-.dev.vars.*
-!.dev.vars.example
-*.pem
-*.key
-*.p12
-service-account*.json
-credentials*.json
-google-services.json
-GoogleService-Info.plist
-
-# 依存関係とビルドの成果物
+.venv/
+__pycache__/
+experiments/out/
+experiments/samples_synthetic/
+experiments/samples_derived/
+ishigaki_samples/_raw/
 node_modules/
 dist/
-build/
-out/
-.next/
-.wrangler/
-__pycache__/
-*.pyc
-.venv/
-venv/
+*.tsbuildinfo
+.env.local
+.local_data/
+experiments/out_*/
+experiments/out_*
 
-# OS とエディタ
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/*
-!.vscode/extensions.json
+# third-party sample photos (Wikimedia etc.): large, and each has its own licence. Keep licences/metadata only.
+ishigaki_samples/images/
+ishigaki_samples/_check/
+ishigaki_change_pairs/photos/
+ishigaki_change_pairs/_raw/
+ishigaki_change_pairs/compare/
+
+# local scratch
+.playwright-mcp/
+spot*-qr.png
 *.log
+.pytest_cache/
+dev-dist/
+.firebase/
+firebase-debug.log
+.vite/
+
+# my own field photos (may show people / places): keep local
+/実写サンプル/
+experiments/samples/*.jpg
+experiments/samples/*.jpeg
+experiments/samples/*.png
+
+# tool output
+.yomiyasu/
+.playwright-mcp/
